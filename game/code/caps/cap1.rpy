@@ -1,3 +1,5 @@
+
+
 label cap1:
     stop music fadeout 2.0
     #lo de scene es para mostrar el fondo, y el with es para hacer la transición entre escenas
@@ -84,7 +86,7 @@ label cap1:
 
     s "Realmente... ¡¡estás peor que yo!!! el timbre suena unas 3 veces."
 
-    show sayori tap om ce zorder 2 at t11
+    show sayori tap nerv cm oe zorder 2 at t11
 
     player "\"Si bueno, de todos modos no necesitas esperarme seguro los de tu club se preocuparán por ti.\"" 
 
@@ -116,7 +118,7 @@ label cap1:
 
     s "Pero me prometiste que lo harías!"
 
-    show sayori tap uniform pout om oe zorder 2 at t11
+    show sayori tap uniform pout cm oe zorder 2 at t11
 
     player "\"¿Enserio es importante para ti qué lo haga?\""
 
@@ -128,7 +130,7 @@ label cap1:
 
     s "Ayer... les dije a todo el club que traería un nuevo miembro y además Natsuki hizo pastelitos."
 
-    show sayori turned uniform nerv om oe zorder 2 at t43
+    show sayori turned uniform nerv cm oe zorder 2 at t43
 
     player "\"¿¡Hiciste un promesa de algo que no depende de ti!?\""
 
@@ -136,7 +138,7 @@ label cap1:
 
     s "Como tú diciendo que visitarias algunos clubs?"
 
-    show sayori 2c zorder 2 at t11
+    show sayori turned neut cm oe zorder 2 at t11
 
     player "\"...\""
 
@@ -159,8 +161,7 @@ label cap1:
     show sayori zorder 2 at thide
     hide s
 
-    scene bg class_day
-    with fade
 
-    jump yuri_chiquita
+    call cap2
+
 

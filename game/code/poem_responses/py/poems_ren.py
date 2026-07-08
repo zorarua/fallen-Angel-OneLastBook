@@ -136,27 +136,28 @@ class Poem(renpy.text.text.Text):
         :return music: A formatted music string.
         :rtype: str
         """
-        music_match_pattern = re.compile(r"^<.*?>")
-        track_partition_pattern = re.compile(r"from( *)((\d+\.\d*)|(\d+)|(\.\d+))")
+        if not music:
+            return music
 
-        if music_match_pattern.match(music):
-            info, gt, path = music.partition(">")
+        if music.startswith("<"):
+            info, sep, path = music.partition(">")
+            if not sep:
+                return music
 
-            if track_partition_pattern.search(info):
-                info = track_partition_pattern.sub("from %s" % pos, info)
-                music = info + gt + path
-            else:
-                music = "<from %s %s>" % (pos, music[1:])
-        else:
-            music = "<from %s %s>" % (pos, music)
+            content = info[1:]
+            content = re.sub(r"\bfrom\s+((\d+\.\d*)|(\d+)|(\.\d+))", f"from {pos}", content)
+            if "from " not in content:
+                content = f"from {pos} {content}"
 
-        return music
+            return f"<{content}>{path}"
+
+        return f"<from {pos} {music}>"
 
     def show(
         self,
         img: str | None = None,
         at_list: list = [store.i11],
-        paper_sound: str | None = store.audio.page_turn,
+        paper_sound: str | None = "sfx/pageflip.ogg",
         music: str | bool = True,
         from_current: bool = True,
         revert_music: bool = True,
@@ -191,14 +192,14 @@ class Poem(renpy.text.text.Text):
                 poem_track = music or None
 
             if poem_track:
-                previous_music = renpy.music.get_playing()
+                previous_music = renpy.music.get_playing(channel="music")
                 music = (
-                    self.format_music_str(poem_track, renpy.music.get_pos())
-                    if from_current
+                    self.format_music_str(poem_track, renpy.music.get_pos(channel="music"))
+                    if from_current and previous_music
                     else poem_track
                 )
-                renpy.music.play(music, channel="poem", loop=True, fadeout=0.5)
-                renpy.music.stop(fadeout=2.0)
+                renpy.music.stop(channel="music", fadeout=0.5)
+                renpy.music.play(music, channel="music", loop=True, fadein=0.5)
 
             allow_skipping = renpy.config.allow_skipping
             renpy.config.allow_skipping = False
@@ -225,13 +226,11 @@ class Poem(renpy.text.text.Text):
             if poem_track and revert_music:
                 if previous_music:
                     previous_music = (
-                        self.format_music_str(previous_music, renpy.music.get_pos())
+                        self.format_music_str(previous_music, renpy.music.get_pos(channel="music"))
                         if from_current
                         else previous_music
                     )
-                    renpy.music.play(previous_music, loop=True, fadein=2.0)
-
-                renpy.music.stop("music", fadeout=2.0)
+                    renpy.music.play(previous_music, channel="music", loop=True, fadein=2.0)
 
             renpy._window_auto = True
 
@@ -339,10 +338,11 @@ class PoemResponseDB(object):
 # Initialize the Poem database and authors.
 poem_db = PoemResponseDB()
 
-author_s = PoemAuthor("sayori", music=store.audio.tsayori)
-author_n = PoemAuthor("natsuki", music=store.audio.tnatsuki)
-author_y = PoemAuthor("yuri", music=store.audio.tyuri)
-author_m = PoemAuthor("monika", music=store.audio.tmonika)
+author_s = PoemAuthor("sayori", music="<loop 4.444>bgm/5_sayori.ogg")
+author_n = PoemAuthor("natsuki", music="<loop 4.444>bgm/5_natsuki.ogg")
+author_y = PoemAuthor("yuri", music="<loop 4.444>bgm/5_yuri.ogg")
+author_m = PoemAuthor("monika", music="<loop 4.444>bgm/5_monika.ogg")
+author_mc = PoemAuthor("mc")
 
 ## Yuri's Poems
 poem_db.add_poem(
@@ -949,4 +949,170 @@ p  m
 Of m  n ngl ss\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
 Delete Her
     """,
+)
+###################### POEMAS DE ONE LAST BOOK ##########################
+########################### POEMAS DEL DIA 1
+#poema de MC
+poem_db.add_poem(
+    "poem_mc1",
+    author_mc,
+    title="Mi girasol",
+    text="""\
+En un hermoso prado estoy 
+Y en él, veo un hermoso girasol 
+De pétalos dorados 
+Como si se tratase del mismo sol 
+Todo eso lo he visto hoy
+Pues algo como ese girasol, no hay igual 
+Por que como ya se sabe, es un hermoso girasol 
+
+El día siguiente lo volví a visitar
+Con la intención de podérmelo llevar 
+Por que, aunque yo quiera no puedo dejarlo de mirar 
+
+Al girasol lo he puesto en un lindo florero
+Pero veo que el girasol, me dice que no puede estar
+Incluso dice ser prisionero 
+Diciendo que de mis acciones 
+No hay justificaciones
+Pues parece odiar mis decisiones 
+
+Pero no importa, por que aunque se marchite, seguirá siendo mi girasol.""",
+    )
+
+#poema de Yuri
+poem_db.add_poem(
+    "poem_mlb_yuri",
+    author_y,
+    title="Mi libro favorito",
+    text="""\
+En un estante de mi casa
+Hay un libro, del cual no me puedo olvidar 
+Pues un sinfín de memorias, se pueden hallar 
+Memorias las cuales prefiero no recordar
+Pero no importa, pues es mi libro favorito.
+
+Ese libro lo sabe todo de mi pasado 
+Lo cual eso me tiene muy asustado 
+Pues esas memorias, al papel ya se han pegado 
+Negándose a ser borradas 
+Pues como cadenas me tienen atado
+Y amargas son, como si ese fuese su sabor 
+Pero no le doy importancia, es mi  libro favorito 
+
+De ese libro no me puedo deshacer 
+Pues ya lo intente hacer arder 
+Tan solo pensar en el libro, me hace estremecer 
+Pero no lo logro entender 
+Ya que  esas memorias no quieren desaparecer
+Pues esos capítulos, ya se han aferrado al pasado.
+
+Y ahí entendí que ya no me queda nada más que hacer, pues es mi libro favorito.""",
+)
+#borrador de un poema de Yuri
+poem_db.add_poem(
+    "poem_borr_yuri1",
+    author_y,
+    title= "Recuerdos de Diciembre",
+    text="""\
+Bajo la luna, del mes de diciembre 
+Escucho un eco que siempre vuelve 
+Donde cualquier rastro  de ti
+Un asco profundo logra provocar 
+Y un desprecio inmenso, empiezo a demostrar.
+
+A tu falta de valentía 
+Me toca a mi sufrir con esta agonía 
+Que se que desaparecerá algún día 
+Y por tu culpa este sentir 
+Solo se niega a partir 
+
+Ahora con el peso de esta cicatriz 
+Tengo que sufrir 
+Pues, ese sentir llega hasta lo más profundo de mi raíz.
+
+Todo eso me toca sufrir en diciembre 
+Mes que odiare por siempre 
+Pues desde ese entonces tu sombra es como una espina la cual no me puedo librar 
+Pues la luna de diciembre 
+Abre la cicatriz que me atormenta por siempre 
+
+Pero algún día te tocara a ti sufrir 
+Y así tal vez, yo aprenda a vivir 
+Para así, este recuerdo ya dejar ir.
+
+Pero ¿por que todo, eso tengo que recordar en el mes de diciembre? """,
+)
+#poema de Natsuki
+poem_db.add_poem(
+    "natsuki_poem1",
+    author_n,
+    title= "Las Aguilas pueden volar",
+    text="""\
+Los monos pueden trepar,
+los grillos pueden saltar,
+los caballos pueden correr,
+los búhos pueden buscar,
+los guepardos pueden corre,
+las águilas pueden volar,
+la gente puede intentarlo,
+pero eso es todo.""",
+)
+
+########################### POEMAS DEL DIA 2
+#poema de Sayori
+poem_db.add_poem(
+    "Sayori_poem1",
+    author_s,
+    title= "No sé como ser yo sin ti",
+    text="""\
+volví a intentar despertar
+el lago de noche prometí este día visitar
+me levanto, si ¿pero que mas da?
+si cada vez lo pienso, a la cama
+quiero ir una vez más.
+
+Vuelve el deseo a mi mente
+el deseo de tenerte aqui en lago
+y ya no ser indiferentes
+rápido lo empiezo a quitar
+recuerdo que alguien mas ya ocupa mi lugar
+y simplemente... ya no puedo respirar.
+
+ya no quiero nada más, ni siquiera se
+si me quiero despertar
+al lago de noche ya no quiero ir
+porque no se como ser yo sin. """,
+)
+#poema de Yuri
+poem_db.add_poem(
+    "Yuri_poem2",
+    author_y,
+    title= "Señor tic tac",
+    text="""\
+Hoy ante mi tu, te has de presentar Señor tic tac 
+Pues me quieres confesar que el tiempo ya no funciona igual 
+Ya que se debe a las tempestades que yo desate en su corazón 
+Pues es mi forma de agradecer, por  haberme sacado de mi caparazón.
+
+Pero yo quiero que mañana tu estés
+Ya que me juraste, segundos recoger 
+Y así hacer un caminito hecho de años 
+Para juntos crecer, mientras tu me escribes cartas en una hoja 
+Mientras desafías al reloj dentro de una paradoja.
+
+Tu me has contado Señor tic tac 
+Que has visto que la lluvia se retuerce al caer 
+Y haber visto golondrinas durante el amanecer 
+Olvidando  esas historias que aun no tienen solución 
+Pues has decidido darme todo tu amor.
+
+Ahora que el tiempo volvió a la normalidad 
+Ya no me podrás dejar 
+Pues segundos dejaste de recoger 
+Ya que acabaste el caminito hecho de años para que juntos pudiéramos envejecer 
+Me escribiste un millón de cartas en todas estas hojas 
+Pues ya dejaste de desafiar al reloj, en todas esas paradojas. 
+
+Gracias por mostrarte ante mi Señor tic tac. """,
 )

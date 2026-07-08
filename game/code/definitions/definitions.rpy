@@ -48,7 +48,7 @@ define audio.t5 = "<loop 4.444>bgm/5.ogg" # Okay Everyone! - Sharing Poems Theme
 
 define audio.tmonika = "<loop 4.444>bgm/5_monika.ogg" # Okay Everyone! (Monika)
 define audio.tsayori = "<loop 4.444>bgm/5_sayori.ogg" # Okay Everyone! (Sayori)
-define audio.tnatsuki = "<loop 4.444>bgm/5_natsuki.ogg" # Okay Everyone! (Natsuki)
+define audio.tnatsuki = "<loop 4.444>bgm/5_natsuki.ogg" # Okay Everyone! (Natsuki) "C:\renpy\fallen-Angel-OneLastBook\game\bgm\5_natsuki.ogg"
 define audio.tyuri = "<loop 4.444>bgm/5_yuri.ogg" # Okay Everyone! (Yuri)
 
 define audio.t5b = "<loop 4.444>bgm/5.ogg"
@@ -115,7 +115,56 @@ image splash = "bg/splash.png"
 image end:
     truecenter
     "gui/end.png"
-
+# backgrounds añadidos por shyne
+image bg MC_room_destroyed_night = "mod_assets/bg/MC_room_destroyed_night.png"
+image bg MC_room_destroyed_vignette = "mod_assets/bg/MC_room_destroyed_vignette.png"
+image bg MC_room_destroyed = "mod_assets/bg/MC_room_destroyed.png"
+image bg c_end = "mod_assets/bg/c_end.png"
+image bg club_invert = "mod assets/bg/club_invert.png"
+image bg street1_cloudy = "mod_assets/bg/street1/street1_cloudy.png"
+image bg street1_nolight = "mod_assets/bg/street1/street1_nolight.png"
+image bg street1_night = "mod_assets/bg/street1/street1_night.png "
+image bg street1_aft = "mod_assets/bg/street1/street1_aft.png" 
+image bg street1 = "mod_assets/bg/street1/street1.png "
+image bg street1_rainy = "mod_assets/bg/street1/street1_rainy.png "
+image bg street1_stormy = "mod_assets/bg/street1/street1_stormy.png"
+image bg monika_room_evening = "mod_assets/bg/monika_bedroom_evening.png"
+image bg monika_room_night = "mod_assets/bg/monika_bedroom_night.png"
+image bg monika_room = "mod_assets/bg/monika_bedroom.png"
+image bg gate_rainy =  "mod_assets/bg/gate/gate_rainy.png" 
+image bg gate_closed_stormy = "mod_assets/bg/gate/gate_closed_stormy.png" 
+image bg gate_night_stormy =  "mod_assets/bg/gate/gate_night_stormy.png "
+image bg gate_aft_stormy = "mod_assets/bg/gate/gate_aft_stormy.png "
+image bg gate_stormy  = "mod_assets/bg/gate/gate_stormy.png "
+image bg gate_closed_cloudy = "mod_assets/bg/gate/gate_closed_cloudy.png" 
+image bg gate_night_cloudy = "mod_assets/bg/gate/gate_night_cloudy.png "
+image bg gate_aft_cloudy = "mod_assets/bg/gate/gate_aft_cloudy.png "
+image bg gate_cloudy = "mod_assets/bg/gate/gate_cloudy.png "
+image bg gate_closed = "mod_assets/bg/gate/gate_closed.png "
+image bg gate_night = "mod_assets/bg/gate/gate_night.png "
+image bg gate_aft = "mod_assets/bg/gate/gate_aft.png "
+image bg gate = "mod_assets/bg/gate/gate.png "
+image bg gate_closed_rainy = "mod_assets/bg/gate/gate_closed_rainy.png "
+image bg gate_night_rainy = "mod_assets/bg/gate/gate_night_rainy.png "
+image bg gate_aft_rainy = "mod_assets/bg/gate/gate_aft_rainy.png"
+image bg library_nolight =  "mod_assets/bg/library/library_nolight.png" 
+image bg library_night =  "mod_assets/bg/library/library_night.png "
+image bg library_aft =  "mod_assets/bg/library/library_aft.png"
+image bg library =  "mod_assets/bg/library/library.png "
+image bg library_stormy =  "mod_assets/bg/library/library_stormy.png"
+image bg library_cloudy =  "mod_assets/bg/library/library_cloudy.png"
+image bg city_street_rainy =  "mod_assets/bg/city_street/city_street_rainy.png"
+image bg city_street_stormy =  "mod_assets/bg/city_street/city_street_stormy.png" 
+image bg city_street_cloudy =  "mod_assets/bg/city_street/city_street_cloudy.png"
+image bg city_street_nolight =  "mod_assets/bg/city_street/city_street_nolight.png" 
+image bg city_street_night =  "mod_assets/bg/city_street/city_street_night.png" 
+image bg city_street_aft =  "mod_assets/bg/city_street/city_street_aft.png" 
+image bg city_street =  "mod_assets/bg/city_street/city_street.png"
+image bg courtyard_aft =  "mod_assets/bg/courtyard/courtyard_aft.png" 
+image bg courtyard =  "mod_assets/bg/courtyard/courtyard.png "
+image bg courtyard_nolight =  "mod_assets/bg/courtyard/courtyard_nolight.png" 
+image bg courtyard_night =  "mod_assets/bg/courtyard/courtyard_night.png"
+####################3
 image bg residential_day = "bg/residential.png" # Start of DDLC BG
 image bg class_day = "bg/class.png" # The classroom BG
 image bg corridor = "bg/corridor.png" # The hallway BG
@@ -134,12 +183,23 @@ image bg club_day2: # Glitched Club BG
     choice:
         "bg/club-skill.png"
 
-image bg closet = "bg/closet.png" # The closet BG
+image bg closet = "bg/closet.png" # the closet BG
 image bg bedroom = "bg/bedroom.png" # MC's Room BG
 image bg sayori_bedroom = "bg/sayori_bedroom.png" # Sayori's Room BG
 image bg house = "bg/house.png" # Sayori's House BG
 image bg kitchen = "bg/kitchen.png" # MC's Kitchen BG
-
+##############  ONE LAST BOOK  #####################
+image bg escaleras = "mod_assets/bg/stairs_mid/stairs_mid_aft.png"
+image bg bano_Yuri = "images/bg/baño_cuchillo.webp"
+image bg bano_Yuri_nocuchillo = "images/bg/baño_sin_cuchillo.webp"
+image bg street1_morn = "mod_assets/bg/street1/street1.png"
+image bg yuri_sala = "images/bg/yurihouseinterior.png"
+image bg yuri_sala_noche = "images/bg/living room night.png"
+image bg cafe = "images/bg/CherryBlossomCafe.png"
+image bg ciudad_calle_nublado = "mod_assets/bg/city_street/city_street_cloudy.png"
+image bg casa_yuri = "images/bg/house.jpg"
+image silueta = "images/yuri/silueta.png"
+###################################################
 image bg notebook = "bg/notebook.png" # Poem Game Notebook Scene
 image bg notebook-glitch = "bg/notebook-glitch.png" # Glitched Poem Game BG
 
@@ -453,6 +513,7 @@ image sayori 4bv = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "s
 image sayori 4bw = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/w.png")
 image sayori 4bx = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/x.png")
 image sayori 4by = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/y.png")
+
 
 # This image shows a glitched Sayori sprite during Act 2.
 image sayori glitch:
@@ -896,6 +957,22 @@ image n_blackeyes = "images/natsuki/blackeyes.png"
 image n_eye = "images/natsuki/eye.png"
 
 # Yuri's Character Definitions
+#DE ONE LAST BOOK
+#Escena del baño
+image yuri_sentada = "images/yuri/yuri_sentada.png"
+image yuri_parada = "images/yuri/yuri_parada.png"
+
+#Subconciente de Yuri
+image yuri_pequena_timida = "images/yuri/yuri_chiquita.png"
+image yuri_pequena_seria = "images/yuri/yuri_chiquita_hablando.png"
+image yuri_pequena_cry = "images/yuri/yuri_chiquita_cry1.png"
+image yuri_pequena_cry2 = "images/yuri/yuri_chiquita_cry2.png"
+image yuri_pequena_neut = "images/yuri/yuri_chiquita_neut.png"
+image yuri_pequena_sad = "images/yuri/yuri_chiquita_sad.png"
+image yuri_pequena_sad2 = "images/yuri/yuri_chiquita_sad2.png"
+image yuri_pequena_tired = "images/yuri/yuri_chiquita_tired.png"
+
+################
 # Note: Sprites with a 'y' in the middle are Yuri's Yandere Sprites.
 image yuri 1 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/a.png")
 image yuri 2 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/a.png")
@@ -1083,6 +1160,122 @@ image yuri 4bc = im.Composite((960, 960), (0, 0), "yuri/c2.png", (0, 0), "yuri/3
 image yuri 4bd = im.Composite((960, 960), (0, 0), "yuri/d2.png", (0, 0), "yuri/3b.png")
 image yuri 4be = im.Composite((960, 960), (0, 0), "yuri/e2.png", (0, 0), "yuri/3b.png")
 
+#Yuri outfit fallen angel 
+image yuri 1ca = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/a.png"
+)
+image yuri 1cb = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/b.png"
+)
+image yuri 1cc = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/c.png"
+)
+image yuri 1cd = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/d.png"
+)
+image yuri 1ce = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/e.png"
+)
+image yuri 1cf = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/f.png"
+)
+image yuri 1cg = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/g.png"
+)
+image yuri 1ch = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/h.png"
+)
+image yuri 1ci = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/i.png"
+)
+image yuri 1cj = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/j.png"
+)
+image yuri 1ck = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/k.png"
+)
+image yuri 1cl = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/l.png"
+)
+image yuri 1cm = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/m.png"
+)
+image yuri 1cn = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/n.png"
+)
+image yuri 1co = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/o.png"
+)
+image yuri 1cp = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/p.png"
+)
+image yuri 1cq = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/q.png"
+)
+image yuri 1cr = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/r.png"
+)
+image yuri 1cs = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/s.png"
+)
+image yuri 1ct = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/t.png"
+)
+image yuri 1cu = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/u.png"
+)
+image yuri 1cv = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/v.png"
+)
+image yuri 1cw = im.Composite(
+    (960, 960),
+    (0, 0), "images/yuri/Yuri Casual Clothes.png",
+    (0, 0), "yuri/w.png"
+)
 # This image shows the looping Yuri glitched head in Act 2.
 image y_glitch_head:
     "images/yuri/za.png"
@@ -1471,7 +1664,47 @@ default natsuki_23 = False
 
 
 transform animation_title_screen:
-    xoffset -300
-    alpha 0.0
+    # Cuando la pantalla aparece al iniciar el juego
+    on show:
+        xoffset -300
+        alpha 0.0
+        ease .5 xoffset 0 alpha 1.0
+    
+    # Cuando regresas de Ajustes/Cargar (se reemplaza la pantalla)
+    on replace:
+        xoffset 0
+        alpha 1.0
 
-    ease .5 xoffset 0 alpha 1.0
+style navigation_button_text:
+    # Cambiamos el borde viejo por uno negro limpio (o del color que prefieras)
+    # El primer número (2) controla el grosor. Si es más fino, no se amontona.
+    outlines [ (2.6, "#000000", 0, 0) ] 
+    
+    # Añadimos un pequeño espacio interno arriba para que el punto de la 'i' respire
+    top_padding 5
+    #animacion correr
+    # Animación para salir corriendo hacia la DERECHA
+transform correr_derecha:
+    # 'easein' hace que empiece lento y acelere (como alguien arrancando a correr)
+    # Cambiamos el 'xalign' a 2.0 para que se mueva mucho más allá del borde derecho
+    easein 0.6 xalign 2.0 yoffset 0
+    
+    # Este bloque simula el "trote" (subir y bajar) mientras se desplaza
+    parallel:
+        easein 0.6 xalign 2.0
+    parallel:
+        ease 0.15 yoffset -20
+        ease 0.15 yoffset 0
+        ease 0.15 yoffset -20
+        ease 0.15 yoffset 0
+
+# Animación para salir corriendo hacia la IZQUIERDA
+transform correr_izquierda:
+    # Cambiamos el 'xalign' a -1.0 para que salga por el borde izquierdo
+    parallel:
+        easein 0.6 xalign -1.0
+    parallel:
+        ease 0.15 yoffset -20
+        ease 0.15 yoffset 0
+        ease 0.15 yoffset -20
+        ease 0.15 yoffset 0
