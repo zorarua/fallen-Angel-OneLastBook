@@ -1,3 +1,6 @@
+#aqui inicia el dia 1
+
+
 label cap1:
     stop music fadeout 2.0
     #lo de scene es para mostrar el fondo, y el with es para hacer la transición entre escenas
@@ -126,7 +129,7 @@ label cap1:
 
     show sayori turned uniform nerv om oe zorder 2 at f43
 
-    s "Ayer... les dije a todo el club que traería un nuevo miembro y además Natsuki hizo pastelitos."
+    s "Ayer... le dije a todo el club que traería un nuevo miembro y además Natsuki hizo pastelitos."
 
     show sayori turned uniform nerv cm oe zorder 2 at t43
 
@@ -149,8 +152,6 @@ label cap1:
     show sayori 4r zorder 2 at f21
 
     s "¡¡sí!!! ¡¡vamos~!!"
-
-    pause 1.0
 
     show sayori 4r zorder 2 at t22
 

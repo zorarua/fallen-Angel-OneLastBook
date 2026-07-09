@@ -66,6 +66,7 @@ define audio.t9g = "<loop 1.532>bgm/9g.ogg" # My Feelings but 207% Speed
 define audio.t10 = "<loop 5.861>bgm/10.ogg" # My Confession - Sayori Confession Theme
 define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
+define audio.heartbreaking2 = "<loop 1.000>bgm/20260709_125539.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg" # Just Monika. - Just Monika.
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg" # I Still Love You - Monika Post-Delete Theme
