@@ -4,9 +4,8 @@ label cap2:
     $ ach_good_ending = True
     $ ach_secret_scene = True
     $ ach_all_yuri_poems = True
-    
-    stop music fadeout 2.0
-    play music audio.t6
+
+    play music audio.t6 fadein 2.0
     scene bg corridor
 
     with dissolve_scene_full
@@ -40,7 +39,7 @@ label cap2:
     with wipeleft_scene 
     #sirve para hacer una transición de izquierda a derecha, también se puede usar wiperight_scene, wipeup_scene, wipedown_scene
 
-    "Mi mirada se centró en una chica de pelo morado."
+    "Mi mirada se centró en una estudiante de pelo morado."
 
     show yuri 2b zorder 2 at f11
 
@@ -255,7 +254,7 @@ label cap2:
 
     "Le pelirosa agarró bruscamente la bandeja pero debido al movimiento ella terminó cayendo al suelo."
 
-    play sound closet_close
+    play sound obj_fall
     show natsuki 3f zorder 2 at h21
 
     n "off..."
@@ -325,6 +324,8 @@ label cap2:
 
     show natsuki turned lhip rhip ff sad cm oe zorder 2 at t22
 
+    show sayori turned happ om oe zorder 2 at f21
+
     s "¡Siii! aún hay pastelitos"
 
     show natsuki turned lhip rhip ff pout cm oe zorder 2 at f22
@@ -379,11 +380,12 @@ label cap2:
 
     show sayori 1a zorder 2 at t22
 
-    show monika 1a zorder 2 at t21
+    show monika forward lpoint happ cm ce zorder 2 at t21
 
     "Despues de hablar agarró rápidamente un pastelito de la bandeja, seguida de Monika y luego de mi"
     show sayori turned happ om ce zorder 2 at h22
     s "Esh mu delichisosho~ hmm~"
+    show monika forward lpoint happ cm oe zorder 2 at t21
 
     "Mientras Sayori comia Natsuki salió del closet con un trapo y empezó a limpiar el piso"
 
@@ -428,7 +430,7 @@ label cap2:
 
     y "además, una taza de té siempre va de la mano de un libro"
 
-    show yuri 2a zorder 2 at t21
+    show yuri 2o zorder 2 at t21
 
     show monika 3b zorder 2 at f22
 
@@ -449,6 +451,7 @@ label cap2:
     "Yuri volteó su mirada hacia la nada"
 
     show yuri 2w zorder 2 at f21
+    show monika forward lpoint rhip happ cm oe zorder 2 at t22
 
     y "t-tu me entiendes..."
 
@@ -601,7 +604,7 @@ label cap2:
 
     show natsuki cross vang om ce zorder 2 at f33
 
-    n "que verguenza... no me gustaria compartir mis poemas, estoy seguro que el nuevo me entenderá"
+    n "que verguenza... no me gustaria compartir mis poemas, estoy segura que el nuevo me entenderá"
 
     show sayori 1a zorder 2 at t41
 
@@ -619,7 +622,7 @@ label cap2:
 
     mc "supongo que... podria hacer un poema y decirlo y eso"
 
-    show monika forward rhip happ cm oe zorder 2 at f42
+    show monika forward rhip happ om oe zorder 2 at f42
 
     m "perfecto yo también, asi que chicas y [player] doy por concluida la reunion del club por hoy"
 
@@ -793,7 +796,12 @@ label cap2:
 
     mc "estaba buscando algo, ya sabes como me uni al club queria estar más al tanto"
 
+    show monika forward lpoint happ om oe zorder 2 at f11
+
+
     m "ya veo. ¿Te gusta el terror, no?"
+
+    show monika forward lpoint happ cm oe zorder 2 at f11
 
     mc "algo asi..."
 
@@ -968,7 +976,7 @@ label cap2:
     show yuri turned happ cm oe zorder 2 at t31
     show natsuki cross angr om ce zorder 2 at t32
     show monika lean happ om oe zorder 2 at f33 
-    m "no es un poco dificil hablar asi para alguien que tiene una coleccion completa de manga en el salón?"
+    m "¿no es un poco dificil hablar asi para alguien que tiene una coleccion completa de manga en el salón?"
     show monika lean happ om oe zorder 2 at t33 
 
     show natsuki n3 turned shoc om oe zorder 2 at f11
@@ -992,7 +1000,7 @@ label cap2:
     s "tranquilas chicas, [player] siempre apoya cuando algo le interesa... o le piden ayudas jeje..."
     show sayori turned happ om oe zorder 2 at t21
 
-    "Como tu ordenar tu cuarto"
+    "Como ordenar tu cuarto"
 
     show yuri lup rup happ om ce zorder 2 at f22
     y  "que considerado"
@@ -1014,21 +1022,29 @@ label cap2:
 
     y "quizas este un poco celosa"
 
-    s turned happ om oe "¿celosa? ¡pero tu y [player] tambien pueden ser buenos amigos!"
+    show sayori turned happ om oe zorder 2 at f21
+    s "¿celosa? ¡pero tu y [player] tambien pueden ser buenos amigos!"
+    show sayori turned happ cm oe zorder 2 at t22
 
-    y flus cm oe "u-uhm..."
+    show yuri turned flus cm oe zorder 2 at f22
+    y  "u-uhm..."
+    show yuri turned flus cm oe zorder 2 at t22
 
     mc "sayori..."
+
+    show sayori turned happ om oe zorder 2 at f21
 
     s "¿si?"
 
     s "ahh por cierto Yuri te trajo un regalo"
+    show sayori turned happ cm oe zorder 2 at t21
 
-    y turned lup pani om oe "n-no es importante"
+    show yuri turned lup pani om oe zorder 2 at f22
+    y "n-no es importante"
 
-    y shy neut om oe "pe-pero si prefieres no aceptar mi regalo esta bien..."
-
-    s "ah..."
+    show yuri shy neut om oe zorder 2 at f22
+    y "pe-pero si prefieres no aceptar mi regalo esta bien..."
+    show yuri shy neut cm oe zorder 2 at t22
 
     "¿un regalo? ni siquiera en un sueño me imaginaria esto"
     
@@ -1036,36 +1052,45 @@ label cap2:
 
     mc "y cualquier cosa, es bienvenida"
 
-    y shy happ om oe "..."
+    show yuri shy happ om oe zorder 2 at t22
+    y "..."
     show yuri shy happ om oe zorder 2 at thide
     hide yuri
 
     "Yuri caminó hacia su asiento buscando algo en su silla"
 
-    s turned happ om ce "[player] estoy segura que te gustará el regalo jeje..."
+    show sayori turned happ om ce zorder 2 at f21
+    s "[player] estoy segura que te gustará jeje..."
+    show sayori turned happ cm oe zorder 2 at t21
 
     "¿seguimos hablando del regalo?"
     show sayori turned happ om ce zorder 2 at thide
     hide sayori
 
     "Yuri regresó con un libro en la mano"
-    show yuri shy happ cm oe zorder 2 at t11
+    show yuri shy happ cm oe zorder 2 at f11
 
     y "queria regalarte un libro... pensé que te gustaría ya que eres nuevo"
 
-    y shy neut om oe "y en cualquier momento"
+    show yuri shy neut om oe zorder 2 at f11
+    
+    y "y en cualquier momento"
 
     y "o cuando termines"
     
     y "podriamos..."
 
-    y shy neut n5 "compartir opiniones"
+    show yuri shy neut n5 zorder 2 at f11
+    y "compartir opiniones"
+    show yuri shy neut cm oe zorder 2 at t11
 
-    mc "¡muchas gracias Yuri! realmente no se mucho de literatura pero lo leeré con mucho detenimiento"
-    show yuri turned lsur om ce zorder 2 at s11
+    mc "¡muchas gracias Yuri! realmente no se mucho de literatura pero lo leeré"
+    show yuri turned lsur om ce zorder 2 at t11
     "agarré el libro y yuri se relajó"
 
-    y turned happ om ce "estoy emocionada de saber que opinas"
+    show yuri turned happ om ce zorder 2 at f11
+    s "estoy emocionada de saber que opinas"
+    show yuri turned happ cm oe zorder 2 at t11
     mc "No puedo esperar a empezar a leerlo"
     mc "De nuevo muchas gracias Yuri"
     show yuri turned happ om ce zorder 2 at thide
@@ -1073,7 +1098,7 @@ label cap2:
     scene bg club_day
     with wipeleft_scene
     
-    "llevó un tiempo sentando sin hablarle a nadie"
+    "llevo un tiempo sentando sin hablarle a nadie"
 
     "aunque quiero hablarle a Yuri no quiero incomodarla... está muy centrada en su libro"
 
@@ -1091,11 +1116,13 @@ label cap2:
 
     mc "Sobre que trata, si no te molesta que te pregunte"
 
+    show yuri turned flus om oe zorder 2 at f11
     y "N-no te preocupes"
     show yuri turned flus om oe zorder 2 at s11
     y "fuh... el libro, basicamente trata sobre una mujer y su marido encerrados en un campamento"
 
-    y turned lsur om ce "son torturados y custodiados por lo que hacen un plan para escapar, al tratar de escapar son descubiertos y como castigo"
+    show yuri turned lsur om ce zorder 2 at f11
+    y "son torturados y custodiados por lo que hacen un plan para escapar, al tratar de escapar son descubiertos y como castigo"
 
     y "ordenaron al marido ver como su esposa era colgada por 10 minutos mientras su cadaver inerte se palidecia cada vez más"
 
@@ -1109,11 +1136,15 @@ label cap2:
 
     y "La soledad acompañada de una eterna oscuridad eran el martirio de aquel hombre que luchaba por mantener su cordura"
 
+    show yuri turned lsur cm ce zorder 2 at t11
+
+
     "aunque la voz de Yuri ayuda a que no suene tan mal... es una historia muy oscura"
 
-    show yuri turned nerv om oe zorder 2 at h11
 
     "yuri al ver mi rostro parece haber vuelto a la realidad"
+
+    show yuri turned nerv om oe zorder 2 at f11
 
     y "L-lo siento empece a divagar, seguro piensas que soy rara por leer este tipo de libro"
 
@@ -2967,7 +2998,7 @@ label cap2:
 
     y "..."
     show yuri turned cry cm oe zorder 2 at thide
-    hide Yuri 
+    hide yuri 
     show monika forward flus cm oe zorder 2 at thide
     hide monika 
 
@@ -3023,7 +3054,7 @@ label cap2:
 
     mc "callate maldita insoportable"
 
-    scene escaleras
+    scene bg escaleras
     with dissolve_scene_full
     
     #transición 
@@ -3139,7 +3170,7 @@ label cap2:
 
     hide yuri_sentada
 
-    show yuri_parada zorder 2 at t11
+    #show yuri_parada zorder 2 at t11 este sprite le falta
 
     "Yuri se levantó del suelo al ver como me acerco a ella"
 
@@ -3187,8 +3218,8 @@ label cap2:
 
     y "monika... L-lo siento"
 
-    show yuri_parada zorder 2 at t11
-    hide yuri_parada
+    #show yuri_parada zorder 2 at t11
+    #hide yuri_parada
 
     mc "¡Yuri espera!"
 
@@ -4552,10 +4583,10 @@ label cap2:
 
     menu Sayori_eleccion:
         "siempre serás mi mejor amiga.":
-            "tu siempre serás mi mejor amiga"
+            "\"tu siempre serás mi mejor amiga\""
             jump siempre_serás_mi_mejor_amiga
         "Te quiero Sayori.":
-            "Sayori... yo honestamente te quiero en mi vida"
+            "\"Sayori... yo honestamente te quiero en mi vida\""
             jump te_quiero_sayori
 
     label siempre_serás_mi_mejor_amiga:
