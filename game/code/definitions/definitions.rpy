@@ -1536,14 +1536,17 @@ image monika g2:
 # To define a new character without assets, declare a character variable like this instead:
 #   define en = Character('Eileen & Nat', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
-define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define narrator = Character(ctc="ctc", ctc_position="fixed", show_custom_prefix="narrator", what_style="mc_dialog"  )
+define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', what_style="mc_dialog", ctc="ctc", ctc_position="fixed", show_custom_prefix="mc", who_color="#ffffff", who_outlines=[(2, "#4a5159", 0, 0)])
 
+# El prefijo "show_" es obligatorio aquí para que Ren'Py lo envíe a la pantalla
+define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", show_custom_prefix="sayori",who_color="#ffffff", who_outlines=[(2, "#3a7da8", 0, 0)])
+define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", show_custom_prefix="monika", who_color="#ffffff", who_outlines=[(2, "#2e5a1c", 0, 0)])
+define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", show_custom_prefix="natsuki", who_color="#ffffff", who_outlines=[(2, "#b63c60", 0, 0)])
+define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", show_custom_prefix="yuri", who_color="#c8a2c8", who_outlines=[(2, "#4a154b", 0, 0)])
+
+define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define my = Character('Moni & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 # This variable determines whether to allow the player to dismiss pauses.
 # By default this is set by config.developer which is normally set to false
 # once you packaged your mod.
@@ -1711,3 +1714,5 @@ transform correr_izquierda:
         ease 0.15 yoffset 0
         ease 0.15 yoffset -20
         ease 0.15 yoffset 0
+
+        

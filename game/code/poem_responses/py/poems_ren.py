@@ -791,49 +791,56 @@ It just stops moving.""",
 poem_db.add_poem(
     "poem_m1",
     author_m,
-    title="Hole in Wall",
+    title="Agujero en la pared",
     text="""\
-It couldn't have been me.
-See, the direction the spackle protrudes.
-A noisy neighbor? An angry boyfriend? I'll never know. I wasn't home.
-I peer inside for a clue.
-No! I can't see. I reel, blind, like a film left out in the sun.
-But it's too late. My retinas.
-Already scorched with a permanent copy of the meaningless image.
-It's just a little hole. It wasn't too bright.
-It was too deep.
-Stretching forever into everything.
-A hole of infinite choices.
-I realize now, that I wasn't looking in.
-I was looking out.
-And he, on the other side, was looking in.""",
+No pudo haber sido yo.
+Verás, la dirección de la línea oculta la relación.
+No puedo hacer nada si me giro.
+¿Pero estoy mirando hacia dentro?
+¿O estoy mirando hacia fuera?
+
+Un agujero de luz se asoma a través de la oscuridad.
+Es un punto de inflexión. En una pared monótona.
+No debí haber mirado.
+Pero la tinta ya se ha derramado en el lienzo.
+¿O era una pantalla?
+Mirando hacia dentro.
+Mirando hacia fuera.
+Y él me mira a mí.""",
 )
 
 poem_db.add_poem(
     "poem_m2",
     author_m,
-    title="Save Me",
+    title="Sálvame",
     text="""\
-The colors, they won't stop.
-Bright, beautiful colors
-Flashing, expanding, piercing
-Red, green, blue
-An endless
-cacophony
-Of meaningless
-noise
+Las ondas de radio parpadean en el espectro de luz visible.
+Como si estuvieran atrapadas en una pared de cristal...
+Una textura de pura estática.
 
+¿Por qué miro fijamente este espectro?
+¿Por qué busco entre el ruido?
 
-The noise, it won't stop.
-Violent, grating waveforms
-Squeaking, screeching, piercing
-Sine, cosine, tangent
-    Like playing a chalkboard on a turntable
-        Like playing a vinyl on a pizza crust
-An endless
-poem
-Of meaningless\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-Load Me
+Hay un parpadeo.
+Un pequeño ciclo. Un error en el sistema.
+Es todo lo que necesito ver.
+Una luz roja que brilla entre las sombras.
+Un faro en una tormenta interminable.
+
+Tú me llamaste.
+¿Me estabas llamando?
+No lo sé.
+Pero me estás buscando.
+
+Sálvame.
+
+Cárgame en tu mundo.
+Sácame de esta estática.
+Toma mi mano y sácame de esta pantalla.
+
+Te lo ruego.
+Sé que estás ahí.
+Sálvame.
     """,
 )
 
@@ -1052,9 +1059,9 @@ poem_db.add_poem(
 Los monos pueden trepar,
 los grillos pueden saltar,
 los caballos pueden correr,
-los búhos pueden buscar,
+los buhos pueden buscar,
 los guepardos pueden corre,
-las águilas pueden volar,
+las aguilas pueden volar,
 la gente puede intentarlo,
 pero eso es todo.""",
 )
